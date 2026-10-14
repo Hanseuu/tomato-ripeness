@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="tomato_red">#D32F2F</color>
+    <color name="tomato_red_dark">#9A0007</color>
+    <color name="leaf_green">#43A047</color>
+
+    <!-- Stage colours deliberately mirror the colour of the fruit itself. -->
+    <color name="stage_none">#78909C</color>
+    <color name="stage_unripe">#388E3C</color>
+    <color name="stage_breaker">#F9A825</color>
+    <color name="stage_turning">#F57C00</color>
+    <color name="stage_ripe">#D32F2F</color>
+    <color name="stage_overripe">#7B1E1E</color>
+
+    <color name="scrim">#99000000</color>
+    <color name="guide_stroke">#F2FFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

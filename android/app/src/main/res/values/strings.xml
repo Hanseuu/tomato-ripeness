@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tomato Ripeness</string>
+
+    <!-- Main screen -->
+    <string name="hint_aim">Point the camera at one tomato and fill the box</string>
+    <string name="action_check">Check this tomato</string>
+    <string name="action_info">About this app</string>
+    <string name="action_voice_on">Turn voice off</string>
+    <string name="action_voice_off">Turn voice on</string>
+    <string name="voice_enabled">Voice on</string>
+    <string name="voice_disabled">Voice off</string>
+    <string name="confidence_label">Confidence %1$d%%</string>
+    <string name="detail_readout">Red %1$d%% · Green %2$d%% · ripeness score %3$.2f</string>
+    <string name="detail_with_model">Red %1$d%% · Green %2$d%% · score %3$.2f · model: %4$s</string>
+    <string name="scanning">Scanning…</string>
+    <string name="dialog_close">Close</string>
+
+    <!-- Camera permission -->
+    <string name="permission_rationale">This app needs the camera to look at your tomato. Nothing is recorded, uploaded or saved.</string>
+    <string name="permission_grant">Allow camera</string>
+    <string name="permission_denied">Camera permission is required. You can enable it in Settings → Apps → Tomato Ripeness → Permissions.</string>
+    <string name="camera_error">Could not start the camera. Please restart the app.</string>
+
+    <!-- Stages -->
+    <string name="stage_none_title">No tomato found</string>
+    <string name="stage_none_verdict">No tomato detected.</string>
+    <string name="stage_none_advice">Move closer so one tomato fills the box, and make sure there is enough light.</string>
+
+    <string name="stage_unripe_title">Unripe</string>
+    <string name="stage_unripe_verdict">This tomato is not ready to eat yet.</string>
+    <string name="stage_unripe_advice">The skin is still green. Leave it at room temperature for about a week, then check again.</string>
+
+    <string name="stage_breaker_title">Starting to turn</string>
+    <string name="stage_breaker_verdict">Not ready to eat yet. Please wait a few more days.</string>
+    <string name="stage_breaker_advice">The colour is breaking from green to yellow. Give it roughly 3 to 5 more days.</string>
+
+    <string name="stage_turning_title">Almost ripe</string>
+    <string name="stage_turning_verdict">Almost ready. Give it one or two more days.</string>
+    <string name="stage_turning_advice">Mostly orange-red. Keep it out of the fridge and check again tomorrow.</string>
+
+    <string name="stage_ripe_title">Ripe</string>
+    <string name="stage_ripe_verdict">This tomato is safe to eat.</string>
+    <string name="stage_ripe_advice">Fully red and ready now. Best eaten within the next few days.</string>
+
+    <string name="stage_overripe_title">Overripe</string>
+    <string name="stage_overripe_verdict">This tomato is overripe.</string>
+    <string name="stage_overripe_advice">Fine for sauce or cooking if it is still firm and unbroken. Throw it away if it is leaking, mouldy, or smells off.</string>
+
+    <!-- Info screen -->
+    <string name="info_title">About this app</string>
+    <string name="info_how_heading">How it works</string>
+    <string name="info_how_body">A tomato ripens through a predictable sequence of colours: green, then yellow, then orange, then red. The app samples thousands of pixels inside the focus box, converts each one to hue/saturation/brightness, throws away everything that cannot be tomato skin (grey backgrounds, deep shadows, glare, blue and violet surroundings), and sorts the rest into colour bands.\n\nEach band carries a ripeness weight, and their weighted average becomes a ripeness score from 0.00 (completely green) to 1.00 (completely red). That score picks the stage. Verdicts are voted across the last several frames so the reading does not flicker while you move the phone.</string>
+
+    <string name="info_stages_heading">Ripeness stages</string>
+    <string name="info_stages_body">Unripe — score below 0.35. Still green; about a week to go.\n\nStarting to turn — 0.35 to 0.60. Green giving way to yellow; roughly 3 to 5 days.\n\nAlmost ripe — 0.60 to 0.80. Mostly orange-red; one or two days.\n\nRipe — 0.80 and above. Fully red and ready to eat.\n\nOverripe — deep red but dark and dull. Better cooked than eaten raw.</string>
+
+    <string name="info_source_heading">Detection method in use</string>
+    <string name="info_source_colour">Colour analysis only.\n\nNo trained model is installed, so the stage comes purely from skin colour. This works well in even lighting on a single tomato that fills the focus box.\n\nTo add the trained model, run tools/train_ripeness_model.py on the Kaggle dataset and drop the resulting model.tflite and labels.txt into app/src/main/assets.</string>
+    <string name="info_source_model">Trained model plus colour analysis.\n\nmodel.tflite decides whether the tomato is ripe or unripe — that is what the Kaggle dataset labels. Colour analysis then refines the answer into how many days are left, and confidence is reduced whenever the two methods disagree.</string>
+
+    <string name="info_accuracy_heading">Limits worth knowing</string>
+    <string name="info_accuracy_body">Colour is a good ripeness signal, but it is only the outside of the fruit:\n\n• Coloured lighting shifts hues. Daylight or neutral white light gives the most reliable reading.\n\n• Yellow, orange, green, and striped tomato varieties never turn red, so they read as unripe for their whole life.\n\n• Ripeness is not the same as food safety. The app cannot see mould, bruising, splits, or spoilage inside the fruit. Always check and smell a tomato before eating it.\n\n• Only the focus box is inspected, and only one tomato at a time.</string>
+
+    <string name="info_privacy_heading">Privacy</string>
+    <string name="info_privacy_body">Every frame is analysed on the device and discarded immediately. Nothing is recorded, stored, or sent anywhere, and the app needs no account and no internet connection.</string>
+
+    <string name="info_dataset_heading">Dataset credit</string>
+    <string name="info_dataset_body">Ripeness classes follow the “Riped and Unriped Tomato Dataset” by sumn2u on Kaggle, along with its companion YOLOv8 detection notebook.\n\nkaggle.com/datasets/sumn2u/riped-and-unriped-tomato-dataset</string>
+</resources>

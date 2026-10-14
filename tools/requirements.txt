@@ -1,0 +1,4 @@
+# For tools/train_ripeness_model.py
+tensorflow>=2.16
+pillow>=10.0
+pyyaml>=6.0

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="32dp">
+
+        <TextView
+            style="@style/InfoHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_how_heading" />
+
+        <TextView
+            style="@style/InfoBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_how_body" />
+
+        <TextView
+            style="@style/InfoHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_stages_heading" />
+
+        <TextView
+            style="@style/InfoBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_stages_body" />
+
+        <TextView
+            style="@style/InfoHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_source_heading" />
+
+        <!-- Filled in at runtime: depends on whether model.tflite is present. -->
+        <TextView
+            android:id="@+id/sourceBody"
+            style="@style/InfoBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            style="@style/InfoHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_accuracy_heading" />
+
+        <TextView
+            style="@style/InfoBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_accuracy_body" />
+
+        <TextView
+            style="@style/InfoHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_privacy_heading" />
+
+        <TextView
+            style="@style/InfoBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_privacy_body" />
+
+        <TextView
+            style="@style/InfoHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_dataset_heading" />
+
+        <TextView
+            style="@style/InfoBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/info_dataset_body" />
+    </LinearLayout>
+</ScrollView>
