@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Camera screen: no action bar, the preview goes edge to edge. -->
+    <style name="Theme.TomatoRipeness" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/tomato_red</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/leaf_green</item>
+    </style>
+
+    <!-- Info screen keeps an action bar so the up arrow works. -->
+    <style name="Theme.TomatoRipeness.Info" parent="Theme.Material3.DayNight">
+        <item name="colorPrimary">@color/tomato_red</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/leaf_green</item>
+    </style>
+
+    <style name="InfoHeading">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/tomato_red</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+    </style>
+
+    <style name="InfoBody">
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+    </style>
+</resources>

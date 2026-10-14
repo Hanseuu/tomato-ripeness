@@ -1,0 +1,29 @@
+# Android / Gradle
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/.idea/
+android/.cxx/
+*.apk
+*.aab
+*.iml
+
+# Trained model output (regenerate with tools/train_ripeness_model.py)
+tools/out/
+tools/_crops/
+
+# The model itself is a build artefact, not source. Remove this line if you
+# would rather commit it so teammates get a ready-to-run app.
+android/app/src/main/assets/model.tflite
+android/app/src/main/assets/labels.txt
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db

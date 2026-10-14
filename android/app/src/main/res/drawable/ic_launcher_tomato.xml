@@ -1,0 +1,26 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+    <!-- fruit -->
+    <path
+        android:fillColor="#D32F2F"
+        android:pathData="M24,14c8.3,0 15,6.7 15,15s-6.7,15 -15,15 -15,-6.7 -15,-15 6.7,-15 15,-15z" />
+    <!-- highlight -->
+    <path
+        android:fillAlpha="0.28"
+        android:fillColor="#FFFFFF"
+        android:pathData="M16,24c2.5,-3 6,-4.5 9.5,-4 -4,0.5 -7.5,2 -9.5,4z" />
+    <!-- stem -->
+    <path
+        android:fillColor="#43A047"
+        android:pathData="M22.8,6h2.4v9h-2.4z" />
+    <!-- sepals -->
+    <path
+        android:fillColor="#43A047"
+        android:pathData="M24,15L13,9.5l1.6,6.2L22,17.6z" />
+    <path
+        android:fillColor="#43A047"
+        android:pathData="M24,15L35,9.5l-1.6,6.2L26,17.6z" />
+</vector>
