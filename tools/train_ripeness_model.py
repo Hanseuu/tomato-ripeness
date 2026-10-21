@@ -17,7 +17,7 @@ Usage
 
     # 2. Copy the two generated files into the app:
     cp tools/out/model.tflite tools/out/labels.txt \
-       android/app/src/main/assets/
+       app/src/main/assets/
 
 The exported model takes RGB input normalised to 0..1, which is exactly what
 TomatoModelClassifier.classify() feeds it.
@@ -360,7 +360,7 @@ def train(crops_dir: Path, out_dir: Path, image_size: int, batch_size: int,
 
     print(f"\nWrote {model_path} ({model_path.stat().st_size / 1_000_000:.2f} MB)")
     print(f"Wrote {labels_path}: {class_names}")
-    print("\nCopy both into android/app/src/main/assets/ and rebuild the app.")
+    print("\nCopy both into app/src/main/assets/ and rebuild the app.")
 
 
 def to_tflite(model, out_dir: Path) -> bytes:

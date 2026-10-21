@@ -11,7 +11,7 @@ thrown away immediately.
 
 ## Running it
 
-1. Open the **`android/`** folder in Android Studio (not the repository root).
+1. Open this folder in Android Studio (**File → Open**, pick the repository root).
 2. Let Gradle sync, then Run on a physical device.
 3. Allow the camera permission, point the box at one tomato.
 
@@ -74,7 +74,7 @@ python tools/train_ripeness_model.py --dataset ~/Downloads/tomato-dataset
 # Inspect the crops before committing to a training run:
 python tools/train_ripeness_model.py --dataset ~/Downloads/tomato-dataset --crops-only
 
-cp tools/out/model.tflite tools/out/labels.txt android/app/src/main/assets/
+cp tools/out/model.tflite tools/out/labels.txt app/src/main/assets/
 ```
 
 Rebuild, and the info screen will report "Trained model plus colour analysis".
@@ -92,19 +92,18 @@ Confidence is reduced whenever the two methods disagree.
 ## Project layout
 
 ```
-android/                                  Android Studio project
-  app/src/main/java/com/example/tomatoripeness/
-    MainActivity.kt                       camera, UI, speech triggers
-    InfoActivity.kt                       explanation screen
-    ripeness/
-      ColourRipenessAnalyzer.kt           HSV sampling -> ripeness score
-      RipenessEngine.kt                   score/model -> stage + confidence
-      TomatoModelClassifier.kt            optional TFLite classifier
-      ResultSmoother.kt                   majority vote across frames
-      RgbaFrame.kt                        camera frame access, crops
-      RipenessStage.kt, RipenessResult.kt
-    speech/RipenessSpeaker.kt             text-to-speech with repeat guard
-  app/src/main/assets/                    drop model.tflite + labels.txt here
+app/src/main/java/com/example/tomatoripeness/
+  MainActivity.kt                         camera, UI, speech triggers
+  InfoActivity.kt                         explanation screen
+  ripeness/
+    ColourRipenessAnalyzer.kt             HSV sampling -> ripeness score
+    RipenessEngine.kt                     score/model -> stage + confidence
+    TomatoModelClassifier.kt              optional TFLite classifier
+    ResultSmoother.kt                     majority vote across frames
+    RgbaFrame.kt                          camera frame access, crops
+    RipenessStage.kt, RipenessResult.kt
+  speech/RipenessSpeaker.kt               text-to-speech with repeat guard
+app/src/main/assets/                      drop model.tflite + labels.txt here
 tools/train_ripeness_model.py             dataset -> model.tflite
 ```
 
